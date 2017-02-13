@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+/* line 13, ../compass/sass/styles.scss */
+* {
+  color: #2E2F3A;
+  background-color: #ECECED;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 23, ../compass/sass/styles.scss */
+.search-bar {
+  background-color: white;
+}
+
+/* line 27, ../compass/sass/styles.scss */
+.search-button {
+  background-color: #1B998B;
+  color: white;
+}
+
+/* line 33, ../compass/sass/styles.scss */
+.input-wrapper {
+  margin-top: 15px;
+}

@@ -1,0 +1,35 @@
+ @import "compass/utilities";
+ @import "compass/css3";
+
+// CONFIGS
+// -------------------------------
+@import "configs/variables";
+
+// BOOTSRAP
+// -------------------------------
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+
+
+* {
+	color: $darkblue;
+	background-color: $lightblue;
+	font-family: $bodyfont;
+}
+
+.header-wrapper{
+
+}
+
+.search-bar{
+	background-color: white;
+}
+
+.search-button{
+	
+	background-color: $green;
+	color: white;
+}
+
+.input-wrapper{
+	margin-top: 15px;
+}
