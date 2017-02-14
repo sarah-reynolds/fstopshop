@@ -10,14 +10,14 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 
 
-* {
+body {
 	color: $darkblue;
 	background-color: $lightblue;
 	font-family: $bodyfont;
 }
 
 .header-wrapper{
-
+	// line-height: 80px;
 }
 
 .search-bar{
@@ -25,11 +25,15 @@
 }
 
 .search-button{
-	
 	background-color: $green;
 	color: white;
 }
 
 .input-wrapper{
-	margin-top: 15px;
+	margin-top: 3%;
+}
+
+.product-wrapper{
+	background-color: white;
+	margin-top: 10px;
 }

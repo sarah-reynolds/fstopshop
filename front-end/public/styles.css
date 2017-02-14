@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans");
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 /* line 13, ../compass/sass/styles.scss */
-* {
+body {
   color: #2E2F3A;
   background-color: #ECECED;
   font-family: "Open Sans", sans-serif;
@@ -18,7 +18,13 @@
   color: white;
 }
 
-/* line 33, ../compass/sass/styles.scss */
+/* line 32, ../compass/sass/styles.scss */
 .input-wrapper {
-  margin-top: 15px;
+  margin-top: 3%;
+}
+
+/* line 36, ../compass/sass/styles.scss */
+.product-wrapper {
+  background-color: white;
+  margin-top: 10px;
 }
