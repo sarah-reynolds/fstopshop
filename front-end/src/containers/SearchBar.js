@@ -25,6 +25,8 @@ class SearchBar extends Component {
 	}
 
 	render() {
+
+		var searchResults: "";
 		return (
 			<div className="col-sm-8">
 				<form className="input-group input-wrapper" onSubmit={this.auctionSearch}>
@@ -36,6 +38,12 @@ class SearchBar extends Component {
 			</div>
 
 		);
+	}
+}
+
+function mapStateToProps(state){
+	return{
+		searchResults: state.search
 	}
 }
 
