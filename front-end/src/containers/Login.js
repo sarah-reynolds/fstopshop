@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import Product from './Product';
 
-class Home extends Component {
+class Login extends Component {
 	render() {
 		return (
 			<div className="container">
 				<div className="row">
-					<Product />
+					Login
 				</div>
 			</div>
 		);
 	}
 }
 
-export default Home;
+export default Login;
