@@ -27,17 +27,18 @@ router.get('/getHomeAuctions', (req, res, next)=> {
 
 router.post('/register', (req, res, next)=>{
 	console.log(req.body)
-	checkDupeUserQuery = "SELECT * FROM users WHERE username = ?";
+	checkDupeUserQuery = "SELECT * FROM users WHERE username = ?;";
 	connection.query(checkDupeUserQuery,[req.body.username],(error,results,fields)=>{
 		console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 		console.log(results);
 		if(results.length === 0){
 			
 			//go ahead and register user
-			var insertUserQuery = "INSERT INTO users (name, username, password, email) VALUES "+"(?, ?, ?, ?)";
-				console.log(results);
+			var insertUserQuery = "INSERT INTO users (name, username, password, email) VALUES "+"(?, ?, ?, ?);";
+				
 				console.log(insertUserQuery)
 			connection.query(insertUserQuery,[req.body.name,req.body.username,req.body.password,req.body.email],(error2,results2,fields2)=>{
+				console.log(results2);
 				res.json({
 					msg:"userInserted"
 				});
