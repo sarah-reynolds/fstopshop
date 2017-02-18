@@ -16,17 +16,22 @@ body {
 	font-family: $bodyfont;
 }
 
-.header-wrapper{
-	// line-height: 80px;
-}
-
 .search-bar{
 	background-color: white;
+}
+
+.nav-wrapper{
+	margin: 10px 0;
 }
 
 .search-button{
 	background-color: $green;
 	color: white;
+}
+.search-button, .search-bar{
+	border: none;
+	border-bottom: 1px solid $green;
+				border-radius: 0px;
 }
 
 .input-wrapper{
@@ -35,5 +40,24 @@ body {
 
 .product-wrapper{
 	background-color: white;
-	margin-top: 10px;
+	border: solid 3px $lightblue;
+		img{
+			width: 100%;
+		}
+}
+
+#register-form{
+	.form-group{
+			input{
+				background-color: white;
+				border: none;
+				border-bottom: 1px solid $green;
+				border-radius: 0px;
+				margin-bottom: 25px;
+			}
+			input:focus{
+				outline: $green;
+				border: 1px solid $green;
+			}
+	}
 }

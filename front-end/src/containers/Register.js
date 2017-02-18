@@ -23,33 +23,55 @@ class Register extends Component {
 			email: event.target[3].value
 
 		})
-		// this.props.registerAction(this.state)
-		console.log()
+
 
 	}
 
 	render() {
+		var message = "";
 		if(this.props.registerResponse.msg === "userNameTaken"){
-			var message = "Username taken";
+			message = "*Username taken*";
 		}else if(this.props.registerResponse.msg === "userInserted"){
-			var message = "User inserted";
+			message = "User inserted";
 		}else{
-			var message = "";
+			message = "";
 		}
 
 		return (
 			<div className="container">
 				<div className="row">
-					Register
-					<h3>{message}</h3>
-					<form onSubmit={this.registerUser}>
-						<input type="text" name="name" placeholder="Full name" />
-						<input type="text" name="username" placeholder="Username" />
-						<input type="password" name="password" placeholder="Password" />
-						<input type="email" name="email" placeholder="email" />
-						<input type="submit" value="Register!" />
+					
+					<div className="col-xs-12">
+						<h2>Account sign up</h2><br />
+					</div>
+					<div className="col-sm-8 col-xs-12">
+					<form id="register-form" onSubmit={this.registerUser}>
+						<div className="form-group">
+							<label>Full name&nbsp;</label>
+								<input className="reg-input form-control" type="text" name="name"/>
+						</div>
+						<div className="form-group">
+							<label>Username&nbsp;</label>
+								<input className="reg-input form-control" type="text" name="username"/>
+						</div>
+						<div className="form-group">
+							<label>Password&nbsp;</label>
+								<input className="reg-input form-control" type="password" name="password" />
+						</div>
+						<div className="form-group">
+							<label>Confirm password&nbsp;</label>
+								<input className="reg-input form-control" type="password" />
+						</div>
+						<div className="form-group">
+							<label>Email&nbsp;</label>
+								<input className="reg-input form-control" type="email" name="email" />
+						</div>
+						<input className="search-button" type="submit" value="Register" />
 					</form>
-
+					</div>
+					<div className="col-xs-12">
+						<h3 className="">{message}</h3>
+					</div>
 				</div>
 			</div>
 		);

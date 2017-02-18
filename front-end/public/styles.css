@@ -7,9 +7,14 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 23, ../compass/sass/styles.scss */
+/* line 19, ../compass/sass/styles.scss */
 .search-bar {
   background-color: white;
+}
+
+/* line 23, ../compass/sass/styles.scss */
+.nav-wrapper {
+  margin: 10px 0;
 }
 
 /* line 27, ../compass/sass/styles.scss */
@@ -18,13 +23,38 @@ body {
   color: white;
 }
 
-/* line 32, ../compass/sass/styles.scss */
+/* line 31, ../compass/sass/styles.scss */
+.search-button, .search-bar {
+  border: none;
+  border-bottom: 1px solid #1B998B;
+  border-radius: 0px;
+}
+
+/* line 37, ../compass/sass/styles.scss */
 .input-wrapper {
   margin-top: 3%;
 }
 
-/* line 36, ../compass/sass/styles.scss */
+/* line 41, ../compass/sass/styles.scss */
 .product-wrapper {
   background-color: white;
-  margin-top: 10px;
+  border: solid 3px #ECECED;
+}
+/* line 44, ../compass/sass/styles.scss */
+.product-wrapper img {
+  width: 100%;
+}
+
+/* line 51, ../compass/sass/styles.scss */
+#register-form .form-group input {
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #1B998B;
+  border-radius: 0px;
+  margin-bottom: 25px;
+}
+/* line 58, ../compass/sass/styles.scss */
+#register-form .form-group input:focus {
+  outline: #1B998B;
+  border: 1px solid #1B998B;
 }

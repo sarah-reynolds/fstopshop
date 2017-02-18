@@ -26,7 +26,7 @@ class SearchBar extends Component {
 
 	render() {
 
-		var searchResults: "";
+		
 		return (
 			<div className="col-sm-8">
 				<form className="input-group input-wrapper" onSubmit={this.auctionSearch}>
@@ -53,4 +53,4 @@ function mapDispatchToProps(dispatch){
 	}, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
