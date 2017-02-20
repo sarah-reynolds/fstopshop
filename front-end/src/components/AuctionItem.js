@@ -9,13 +9,15 @@ class AuctionItem extends Component {
 		return(
 		<div className="col-sm-4 col-xs-12">
 			<div className="col-xs-12 product-wrapper">
-				<div className="col-sm-4 col-xs-12">
-					<img width="200px" src={auctionItem.url} role="presentation"/>
+				<div className="col-sm-5 col-xs-12">
+					<img width="200px" className="auction-item" src={auctionItem.url} role="presentation"/>
 				</div>
-				<div className="col-sm-8 col-xs-12">
+				<div className="col-sm-7 col-xs-12">
 					<h4><Link to={auctionLink}>{auctionItem.title}</Link></h4>
-					<p>{auctionItem.description}</p>
 					<p>Current bid: {auctionItem.current_bid}</p>
+				</div>
+				<div className="col-xs-12">
+					<p>{auctionItem.description}</p>
 				</div>
 			</div>
 		</div>

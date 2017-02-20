@@ -38,14 +38,16 @@ body {
 /* line 41, ../compass/sass/styles.scss */
 .product-wrapper {
   background-color: white;
+  min-height: 230px;
   border: solid 3px #ECECED;
 }
-/* line 44, ../compass/sass/styles.scss */
+/* line 45, ../compass/sass/styles.scss */
 .product-wrapper img {
   width: 100%;
+  margin-top: 5px;
 }
 
-/* line 51, ../compass/sass/styles.scss */
+/* line 53, ../compass/sass/styles.scss */
 #register-form .form-group input {
   background-color: white;
   border: none;
@@ -53,7 +55,7 @@ body {
   border-radius: 0px;
   margin-bottom: 25px;
 }
-/* line 58, ../compass/sass/styles.scss */
+/* line 60, ../compass/sass/styles.scss */
 #register-form .form-group input:focus {
   outline: #1B998B;
   border: 1px solid #1B998B;
