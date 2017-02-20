@@ -57,7 +57,7 @@ constructor(props) {
 			<p>High bidder id: {auctionItem.high_bidder_id}</p>
 			<form onSubmit={this.submitBid}>
 				<input type="number" placeholder="enter your bid"/>
-				<button type="submit">Bid</button>
+				<button type="submit" className="search-button">Bid</button>
 			</form>
 		</div>
 		)
