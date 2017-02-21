@@ -9,10 +9,9 @@ class NavBar extends Component {
 	render() {
 
 		return (
-				<div className="nav-wrapper">
-					<div className="col-sm-8">
-					</div>
-					<div className="col-sm-4 text-right">
+				<div className="nav-wrapper text-right">
+					
+					<div className="col-xs-12 text-right">
 						<Link to='/login'>Login</Link> or <Link to='/register'>Register</Link>
 					</div>
 				</div>

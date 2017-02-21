@@ -16,17 +16,35 @@ body {
 	font-family: $bodyfont;
 }
 
+.tagline-wrapper{
+	h5{
+		font-style: italic;
+	}
+}
+
+.orange{
+	color: $orange;
+}
 .search-bar{
 	background-color: white;
 }
 
 .nav-wrapper{
 	margin: 10px 0;
+	color: $lightblue;
+	line-height: 30px;
+		div{
+			background-color: $darkblue;
+				a, a:active, a:hover, a:visited{
+					color: $lightblue;
+				}
+		}
 }
 
 .search-button{
 	background-color: $green;
 	color: white;
+	margin-top: 1px;
 }
 .search-button, .search-bar{
 	border: none;

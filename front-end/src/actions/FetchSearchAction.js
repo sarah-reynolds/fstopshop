@@ -1,7 +1,13 @@
-export default function GetSearchResaults(searchString){
-	console.log("action running: ", searchString)
+import $ from 'jquery';
+
+export default function (searchData){
+	var thePromise = $.ajax({
+		method: "POST",
+		url: "http://localhost:3000/searchResults",
+		data: searchData
+	})
 	return{
-		type: 'getSearch',
-		payload: []
+		type: 'GETSEARCH',
+		payload: thePromise
 	}
 }

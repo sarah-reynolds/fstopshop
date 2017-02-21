@@ -14,7 +14,7 @@ class AuctionItem extends Component {
 				</div>
 				<div className="col-sm-7 col-xs-12">
 					<h4><Link to={auctionLink}>{auctionItem.title}</Link></h4>
-					<p>Current bid: {auctionItem.current_bid}</p>
+					<p>Current bid: <span className="orange">${parseFloat(auctionItem.current_bid).toFixed(2)}</span></p>
 				</div>
 				<div className="col-xs-12">
 					<p>{auctionItem.description}</p>

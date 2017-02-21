@@ -7,47 +7,68 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 19, ../compass/sass/styles.scss */
+/* line 20, ../compass/sass/styles.scss */
+.tagline-wrapper h5 {
+  font-style: italic;
+}
+
+/* line 25, ../compass/sass/styles.scss */
+.orange {
+  color: #EA4A27;
+}
+
+/* line 28, ../compass/sass/styles.scss */
 .search-bar {
   background-color: white;
 }
 
-/* line 23, ../compass/sass/styles.scss */
+/* line 32, ../compass/sass/styles.scss */
 .nav-wrapper {
   margin: 10px 0;
+  color: #ECECED;
+  line-height: 30px;
+}
+/* line 36, ../compass/sass/styles.scss */
+.nav-wrapper div {
+  background-color: #2E2F3A;
+}
+/* line 38, ../compass/sass/styles.scss */
+.nav-wrapper div a, .nav-wrapper div a:active, .nav-wrapper div a:hover, .nav-wrapper div a:visited {
+  color: #ECECED;
 }
 
-/* line 27, ../compass/sass/styles.scss */
+/* line 44, ../compass/sass/styles.scss */
 .search-button {
   background-color: #1B998B;
   color: white;
+  margin-top: 1px;
 }
 
-/* line 31, ../compass/sass/styles.scss */
+/* line 49, ../compass/sass/styles.scss */
 .search-button, .search-bar {
   border: none;
   border-bottom: 1px solid #1B998B;
   border-radius: 0px;
 }
 
-/* line 37, ../compass/sass/styles.scss */
+/* line 55, ../compass/sass/styles.scss */
 .input-wrapper {
   margin-top: 3%;
 }
 
-/* line 41, ../compass/sass/styles.scss */
+/* line 59, ../compass/sass/styles.scss */
 .product-wrapper {
   background-color: white;
   min-height: 230px;
   border: solid 3px #ECECED;
 }
-/* line 45, ../compass/sass/styles.scss */
+/* line 63, ../compass/sass/styles.scss */
 .product-wrapper img {
   width: 100%;
   margin-top: 5px;
 }
 
-/* line 53, ../compass/sass/styles.scss */
+/* line 71, ../compass/sass/styles.scss */
 #register-form .form-group input {
   background-color: white;
   border: none;
@@ -55,7 +76,7 @@ body {
   border-radius: 0px;
   margin-bottom: 25px;
 }
-/* line 60, ../compass/sass/styles.scss */
+/* line 78, ../compass/sass/styles.scss */
 #register-form .form-group input:focus {
   outline: #1B998B;
   border: 1px solid #1B998B;

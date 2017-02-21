@@ -3,6 +3,7 @@ var router = express.Router();
 var config = require('../custom_modules/config.js');
 var mysql = require('mysql');
 var randtoken = require('rand-token');
+var stripe = require('stripe')('sk_test_6UslHQ8394oJ4HVmPEE8gtq2')
 var connection = mysql.createConnection({
 	host: config.host,
 	user: config.username,
@@ -38,6 +39,13 @@ router.get('/getAuctionDetail/:auctionId',(req,res,next)=>{
 	connection.query(getAuctionQuery,[theAuctionId],(error,results,fields)=>{
 		console.log(getAuctionQuery)
 		res.json(results)
+	})
+})
+
+router.post('/searchResults', (req,res,next)=>{
+	searchQuery = "SELECT * FROM auctions WHERE title LIKE '%?%';"
+	connection.query(searchQuery,[req.body.search],(error,results,fields)=>{
+		res.json(searchQuery)
 	})
 })
 
@@ -135,6 +143,30 @@ router.post('/submitBid', (req,res,next)=>{
 			// connection.query(updateAuctionsQuery,["",req.body.bidAmount,req.body.auctionItem],())
 		}
 	})
+})
+
+router.post('./stripe',(req,res,next)=>{
+	// run a query against res.body.token to make sure this person is logged in
+	// res.json(req.body)
+	stripe.charges.create({
+	  amount: req.body.amount,
+	  currency: "usd",
+	  source: req.body.stripeToken, // obtained with Stripe.js
+	  description: "Charge for zoey.johnson@example.com"
+	}, function(err, charge) {
+		if(err){
+			res.json({
+				msg:"errorProcessing"
+			})
+		}else{
+			res.json({
+				msg:"paymentSuccess"
+			})
+		}
+		
+	  // asynchronously called
+	});
+
 })
 
 module.exports = router;
