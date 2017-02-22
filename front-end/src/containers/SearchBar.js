@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import FetchSearch from '../actions/FetchSearchAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
+
 
 class SearchBar extends Component {
 	constructor(props) {
@@ -14,9 +16,11 @@ class SearchBar extends Component {
 		this.props.FetchSearch({
 			searchString: event.target[0].value
 		})
+		browserHistory.push('/searchresults');
 	}
 
 	render() {
+
 		
 		return (
 			<div className="col-sm-8">

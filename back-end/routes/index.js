@@ -44,15 +44,17 @@ router.get('/getAuctionDetail/:auctionId',(req,res,next)=>{
 
 router.post('/searchResults', (req,res,next)=>{
 	var searchQuery = "SELECT * FROM auctions WHERE title LIKE ?"
-	console.log(req.body.searchString)
-	connection.query(searchQuery,[req.body.searchString],(error,results,fields)=>{
-		res.json(searchQuery)
-		console.log(searchQuery)
+	// console.log(req.body.searchString)
+	var searchString = "%"+req.body.searchString+"%"
+	// console.log(searchString)
+	connection.query(searchQuery,[searchString],(error,results,fields)=>{
+		// res.json(searchQuery)
+		// console.log(searchQuery)
 		console.log(results)
-		if(error)throw error
-
+		// if(error)throw error
+		// res.render('SearchResults',{searchResults: results})
+		res.json(results)
 	})
-	
 })
 
 router.post('/register', (req, res, next)=>{

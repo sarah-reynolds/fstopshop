@@ -26,6 +26,7 @@ ReactDOM.render(
 				<Route path='/register' component={Register} />
 				<Route path='/search/:term' component={SearchResults} />
 				<Route path='/auction/:auctionId' component={AuctionDetail} />
+				<Route path='/searchresults' component={SearchResults} />
 			</Route>
 		</Router>
 	</Provider>,
