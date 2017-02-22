@@ -43,10 +43,16 @@ router.get('/getAuctionDetail/:auctionId',(req,res,next)=>{
 })
 
 router.post('/searchResults', (req,res,next)=>{
-	searchQuery = "SELECT * FROM auctions WHERE title LIKE '%?%';"
-	connection.query(searchQuery,[req.body.search],(error,results,fields)=>{
+	var searchQuery = "SELECT * FROM auctions WHERE title LIKE ?"
+	console.log(req.body.searchString)
+	connection.query(searchQuery,[req.body.searchString],(error,results,fields)=>{
 		res.json(searchQuery)
+		console.log(searchQuery)
+		console.log(results)
+		if(error)throw error
+
 	})
+	
 })
 
 router.post('/register', (req, res, next)=>{
@@ -163,7 +169,6 @@ router.post('./stripe',(req,res,next)=>{
 				msg:"paymentSuccess"
 			})
 		}
-		
 	  // asynchronously called
 	});
 

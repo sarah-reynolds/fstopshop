@@ -6,6 +6,7 @@ export default function (searchData){
 		url: "http://localhost:3000/searchResults",
 		data: searchData
 	})
+	
 	return{
 		type: 'GETSEARCH',
 		payload: thePromise

@@ -12,7 +12,7 @@ class SearchBar extends Component {
 	auctionSearch(event){
 		event.preventDefault()
 		this.props.FetchSearch({
-			searchString: event.target.value
+			searchString: event.target[0].value
 		})
 	}
 
@@ -45,3 +45,5 @@ function mapDispatchToProps(dispatch){
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+
+
