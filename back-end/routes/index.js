@@ -24,7 +24,7 @@ var checkHash = bcrypt.compareSync("x", hashedPassword)
 router.get('/getHomeAuctions', (req, res, next)=> {
   var auctionsQuery = "SELECT * FROM auctions " +
   "INNER JOIN images ON images.auction_id = auctions.id "
-  + " limit 3"
+  + " limit 10"
   connection.query(auctionsQuery, (error, results, fields) => {
   	if (error) throw error;
   	res.json(results);
