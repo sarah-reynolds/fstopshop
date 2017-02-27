@@ -37,22 +37,11 @@ class Login extends Component {
 			<div className="container">
 				<div className="row">
 					<div className="col-xs-12">
-						<h2>Log in</h2><br />
+						<h2>Account details</h2><br />
 					</div>
 					<div className="col-sm-8 col-xs-12">
-					<form id="register-form" onSubmit={this.loginSubmit}>
-						<div className="form-group">
-							<label>Username&nbsp;</label>
-								<input className="reg-input form-control" type="text" name="username"/>
-						</div>
-						<div className="form-group">
-							<label>Password&nbsp;</label>
-								<input className="reg-input form-control" type="password" name="password"/>
-						</div>
-						
-						<input className="search-button" type="submit" value="Login" />
-					</form>
-					<div>{message}</div>
+
+					<div>Account details will go here</div>
 					</div>
 				</div>
 			</div>
@@ -72,5 +61,6 @@ function mapDispatchToProps(dispatch){
 		loginAction: LoginAction
 	}, dispatch)
 }
+
 
 export default connect(mapStateToProps,mapDispatchToProps)(Login);

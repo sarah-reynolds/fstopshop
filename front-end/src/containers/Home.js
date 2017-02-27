@@ -12,7 +12,7 @@ class Home extends Component {
 	render() {
 		// this.props.getHomeData();
 		// console.log("this.props.homeData",this.props.homeData);
-		console.log("this.props.searchData ",this.props.searchData)
+		// console.log("this.props.searchData ",this.props.searchData)
 		var homeAuctions = [];
 		this.props.homeData.map((auction, index)=>{
 			// homeAuctions.push(<li key={index} >{auction.title}</li>)

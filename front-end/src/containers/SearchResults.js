@@ -17,7 +17,7 @@ class SearchResults extends Component {
 		return (
 			<div className="container">
 				<div className="row">
-					Search results will go here.
+
 					{searchPageResults}
 				</div>
 			</div>

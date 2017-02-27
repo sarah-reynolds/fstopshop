@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 class AuctionItem extends Component {
 	render() {
-		console.log("this.props.item", this.props.item)
+		// console.log("this.props.item", this.props.item)
 		var auctionItem = this.props.item;
 		var auctionLink = '/auction/'+auctionItem.id;
 		return(

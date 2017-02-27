@@ -11,6 +11,7 @@ import SearchResults from './containers/SearchResults';
 import Register from './containers/Register';
 import Login from './containers/Login';
 import AuctionDetail from './containers/AuctionDetail';
+import Account from './containers/Account';
 
 
 import reduxPromise from 'redux-promise'
@@ -27,6 +28,7 @@ ReactDOM.render(
 				<Route path='/search/:term' component={SearchResults} />
 				<Route path='/auction/:auctionId' component={AuctionDetail} />
 				<Route path='/searchresults' component={SearchResults} />
+				<Route path='/account' component={Account} />
 			</Route>
 		</Router>
 	</Provider>,

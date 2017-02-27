@@ -24,8 +24,9 @@ var checkHash = bcrypt.compareSync("x", hashedPassword)
 router.get('/getHomeAuctions', (req, res, next)=> {
   var auctionsQuery = "SELECT * FROM auctions " +
   "INNER JOIN images ON images.auction_id = auctions.id "
-  + " limit 10"
+  + " limit 30"
   connection.query(auctionsQuery, (error, results, fields) => {
+  	// console.log(auctionsQuery)
   	if (error) throw error;
   	res.json(results);
   });
@@ -37,22 +38,20 @@ router.get('/getAuctionDetail/:auctionId',(req,res,next)=>{
 	var theAuctionId = req.params.auctionId;
 	var getAuctionQuery = "SELECT * FROM auctions WHERE id = ?";
 	connection.query(getAuctionQuery,[theAuctionId],(error,results,fields)=>{
-		console.log(getAuctionQuery)
+		// console.log(getAuctionQuery)
 		res.json(results)
 	})
 })
 
 router.post('/searchResults', (req,res,next)=>{
-	var searchQuery = "SELECT * FROM auctions WHERE title LIKE ?"
+	var searchQuery = "SELECT * FROM auctions INNER JOIN images ON images.auction_id = auctions.id " +
+	"WHERE title LIKE ?"
 	// console.log(req.body.searchString)
 	var searchString = "%"+req.body.searchString+"%"
 	// console.log(searchString)
 	connection.query(searchQuery,[searchString],(error,results,fields)=>{
-		// res.json(searchQuery)
-		// console.log(searchQuery)
-		console.log(results)
-		// if(error)throw error
-		// res.render('SearchResults',{searchResults: results})
+		// console.log(results)
+		if(error)throw error
 		res.json(results)
 	})
 })
