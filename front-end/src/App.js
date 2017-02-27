@@ -11,8 +11,8 @@ class App extends Component {
 					<NavBar />
 				</div>
 				<div className="row">
-                    <div className="col-sm-4">
-					   <Link to="/"><img width="100%" src="/images/fstoplogo2.png" role="presentation" /></Link>
+                    <div className="col-sm-4 col-sm-offset-1 logo-wrapper">
+					   <Link to="/"><img src="/images/fstoplogo2.png" role="presentation" /></Link>
                     </div>
                     <SearchBar />
 				</div>

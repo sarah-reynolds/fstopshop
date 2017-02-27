@@ -41,6 +41,13 @@ body {
 		}
 }
 
+.logo-wrapper{
+	img{
+		width: 100%;
+	}
+	
+}
+
 .search-button{
 	background-color: $green;
 	color: white;
@@ -54,6 +61,7 @@ body {
 
 .input-wrapper{
 	margin-top: 3%;
+	width: 100%;
 }
 
 .product-wrapper{

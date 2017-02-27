@@ -37,38 +37,44 @@ body {
   color: #ECECED;
 }
 
-/* line 44, ../compass/sass/styles.scss */
+/* line 45, ../compass/sass/styles.scss */
+.logo-wrapper img {
+  width: 100%;
+}
+
+/* line 51, ../compass/sass/styles.scss */
 .search-button {
   background-color: #1B998B;
   color: white;
   margin-top: 1px;
 }
 
-/* line 49, ../compass/sass/styles.scss */
+/* line 56, ../compass/sass/styles.scss */
 .search-button, .search-bar {
   border: none;
   border-bottom: 1px solid #1B998B;
   border-radius: 0px;
 }
 
-/* line 55, ../compass/sass/styles.scss */
+/* line 62, ../compass/sass/styles.scss */
 .input-wrapper {
   margin-top: 3%;
+  width: 100%;
 }
 
-/* line 59, ../compass/sass/styles.scss */
+/* line 67, ../compass/sass/styles.scss */
 .product-wrapper {
   background-color: white;
   min-height: 230px;
   border: solid 3px #ECECED;
 }
-/* line 63, ../compass/sass/styles.scss */
+/* line 71, ../compass/sass/styles.scss */
 .product-wrapper img {
   width: 100%;
   margin-top: 5px;
 }
 
-/* line 71, ../compass/sass/styles.scss */
+/* line 79, ../compass/sass/styles.scss */
 #register-form .form-group input {
   background-color: white;
   border: none;
@@ -76,7 +82,7 @@ body {
   border-radius: 0px;
   margin-bottom: 25px;
 }
-/* line 78, ../compass/sass/styles.scss */
+/* line 86, ../compass/sass/styles.scss */
 #register-form .form-group input:focus {
   outline: #1B998B;
   border: 1px solid #1B998B;

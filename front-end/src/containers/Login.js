@@ -8,6 +8,9 @@ class Login extends Component {
 	
 	constructor(props) {
 		super(props);
+		this.state = {
+			message: ""
+		}
 
 		this.loginSubmit = this.loginSubmit.bind(this)
 	}
@@ -20,18 +23,26 @@ class Login extends Component {
 		})
 	}
 
-	render() {
-		var message = "";
+	componentDidUpdate(prevProps, prevState) {
 		if(this.props.loginResponse.msg === "badUsername"){
-			message = "Username does not exist";
+			this.setState({
+				message: "Username does not exist"
+			})
 		}else if(this.props.loginResponse.msg === "badPassword"){
-			message = "Incorrect password";
+			this.setState({
+				message: "Incorrect password"
+			})
 		}else if(this.props.loginResponse.msg === "foundUser"){
 			browserHistory.push('/');
 		}else{
-			message = "";
+			this.setState({
+				message: ""
+			})
 		}
+	}
 
+	render() {
+		
 		// console.log(this.props.loginResponse)
 		return (
 			<div className="container">
@@ -52,7 +63,7 @@ class Login extends Component {
 						
 						<input className="search-button" type="submit" value="Login" />
 					</form>
-					<div>{message}</div>
+					<div>{this.state.message}</div>
 					</div>
 				</div>
 			</div>

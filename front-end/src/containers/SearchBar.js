@@ -23,7 +23,7 @@ class SearchBar extends Component {
 
 		
 		return (
-			<div className="col-sm-8">
+			<div className="col-sm-6">
 				<form className="input-group input-wrapper" onSubmit={this.auctionSearch}>
 					<input type="text" className="search-bar form-control" placeholder="Search for camera equipment" />
 					<span className="input-group-btn">

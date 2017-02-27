@@ -7,24 +7,35 @@ import { Link } from 'react-router';
 class NavBar extends Component {
 
 	render() {
-		console.log("loginData", this.props.loginData.msg)
-		if(this.props.loginData.msg === 'foundUser'){
-			return (
-				<div className="nav-wrapper text-right">
-					<div className="col-xs-12 text-right">
-						Welcome back! <Link to='/account'>View account</Link>
-					</div>
-				</div>
-			)
+		var welcomeMsg = ""
+		var account = ""
+		var logout = ""
+		var login = ""
+		var register = ""
+		console.log(this.props)
+		if(this.props.loginData.token){
+			welcomeMsg = "Welcome back!"
+			account = "View my account"
+			logout = "Log out"
+			login = ""
+			register = ""
 		}else{
-			return (
-				<div className="nav-wrapper text-right">
-					<div className="col-xs-12 text-right">
-						<Link to='/login'>Login</Link> or <Link to='/register'>Register</Link>
-					</div>
-				</div>
-			)
+			welcomeMsg = ""
+			account = ""
+			logout = ""
+			login = "Login"
+			register = "Register"
 		}
+		
+
+		console.log("loginData", this.props.loginData.msg)
+		return (
+			<div className="nav-wrapper text-right">
+				<div className="col-xs-12 text-right">
+					{welcomeMsg}&nbsp;<Link to='/account'>{account}</Link>&nbsp;<Link to='/login'>{login}</Link>&nbsp;<Link to='/register'>{register}</Link>
+				</div>
+			</div>
+		)
 	}
 }
 
