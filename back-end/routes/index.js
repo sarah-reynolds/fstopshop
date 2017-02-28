@@ -109,6 +109,7 @@ router.post('/login', (req, res, next)=>{
 					res.json({
 						msg: "foundUser",
 						token: token
+
 					});
 				});
 			}

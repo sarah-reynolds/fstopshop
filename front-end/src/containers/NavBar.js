@@ -32,7 +32,10 @@ class NavBar extends Component {
 		return (
 			<div className="nav-wrapper text-right">
 				<div className="col-xs-12 text-right">
-					{welcomeMsg}&nbsp;<Link to='/account'>{account}</Link>&nbsp;<Link to='/login'>{login}</Link>&nbsp;<Link to='/register'>{register}</Link>
+					{welcomeMsg}&nbsp;
+					<Link to='/account'>{account}</Link>&nbsp;
+					<Link to='/login'>{login}</Link>&nbsp;
+					<Link to='/register'>{register}</Link>
 				</div>
 			</div>
 		)

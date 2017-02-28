@@ -13,7 +13,6 @@ import Login from './containers/Login';
 import AuctionDetail from './containers/AuctionDetail';
 import Account from './containers/Account';
 
-
 import reduxPromise from 'redux-promise'
 
 const theStoreWithMiddleware = applyMiddleware(reduxPromise)(createStore);
