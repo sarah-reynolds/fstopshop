@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import LoginAction from '../actions/LoginAction';
 import { browserHistory } from 'react-router';
 
-class Login extends Component {
+class Account extends Component {
 	
 	constructor(props) {
 		super(props);
@@ -21,16 +21,7 @@ class Login extends Component {
 	}
 
 	render() {
-		var message = "";
-		if(this.props.loginResponse.msg === "badUsername"){
-			message = "Username does not exist";
-		}else if(this.props.loginResponse.msg === "badPassword"){
-			message = "Incorrect password";
-		}else if(this.props.loginResponse.msg === "foundUser"){
-			browserHistory.push('/');
-		}else{
-			message = "";
-		}
+
 
 		// console.log(this.props.loginResponse)
 		return (
@@ -63,4 +54,4 @@ function mapDispatchToProps(dispatch){
 }
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Login);
+export default connect(mapStateToProps,mapDispatchToProps)(Account);
