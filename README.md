@@ -2,14 +2,14 @@
 ## Auction site for camera equipment 
 
 ### Technologies 
-HTML
-CSS
-JAvaScript
-React
-Redux
-Express
-Node.js
-MySQL
+- HTML
+- CSS
+- JavaScript
+- React
+- Redux
+- Express
+- Node.js
+- MySQL
 
 
 ### Dependencies 
