@@ -50,7 +50,7 @@ class Login extends Component {
 					<div className="col-xs-12">
 						<h2>Log in</h2><br />
 					</div>
-					<div className="col-sm-8 col-xs-12">
+					<div className="col-sm-8 col-sm-offset-2 col-xs-12">
 					<form id="register-form" onSubmit={this.loginSubmit}>
 						<div className="form-group">
 							<label>Username&nbsp;</label>

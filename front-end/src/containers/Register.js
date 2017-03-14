@@ -44,7 +44,7 @@ class Register extends Component {
 					<div className="col-xs-12">
 						<h2>Account sign up</h2><br />
 					</div>
-					<div className="col-sm-8 col-xs-12">
+					<div className="col-sm-8 col-sm-offset-2 col-xs-12">
 					<form id="register-form" onSubmit={this.registerUser}>
 						<div className="form-group">
 							<label>Full name&nbsp;</label>
