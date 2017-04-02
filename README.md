@@ -1,7 +1,7 @@
 # fstop shop
 ## Auction site for camera equipment 
 
-### Technologies 
+### Technologies used
 - HTML
 - CSS
 - JavaScript
@@ -16,12 +16,12 @@
 ```
 BE
 nodemon
-npm install mysql --save
+npm install mysql
 
 
 FE
 npm start
-npm install redux --save
-npm install react-redux --save
-npm install jquery --save
+npm install redux
+npm install react-redux
+npm install jquery
 ```

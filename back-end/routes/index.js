@@ -20,6 +20,34 @@ var hashedPassword = bcrypt.hashSync("x");
 var checkHash = bcrypt.compareSync("x", hashedPassword)
 // console.log(checkHash)
 
+
+function getStuff(id){
+	return new Promise(function(resolve,reject){
+		var query = "SELECT * FROM auctions WHERE id="+id;
+		connection.query(query,(error,results,fields)=>{
+			if(error) return reject(error);
+			// console.log(results);
+			resolve(results)
+		})
+	})
+}
+
+var auctionsArray = []
+for(let x = 1;x<6;x++){
+	auctionsArray.push(getStuff(x))
+}
+// Promise.all(auctionsArray).then(contentsOfPromises=>{
+// 	console.log(contentsOfPromises)
+// })
+
+auctionsArray[0].then((theResults)=>{
+	console.log(theResults)
+	auctionsArray[1].then((theResults2)=>{
+		console.log(theResults2)
+	})
+})
+
+
 /* GET top 3 auctions page. */
 router.get('/getHomeAuctions', (req, res, next)=> {
   var auctionsQuery = "SELECT * FROM auctions " +
