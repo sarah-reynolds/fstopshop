@@ -1,5 +1,5 @@
 # fstop shop
-## Auction site for camera equipment 
+Camera equipment auction website 
 
 ### Technologies used
 - HTML
