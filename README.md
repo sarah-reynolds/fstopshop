@@ -3,7 +3,7 @@ Camera equipment auction website
 
 ### Technologies used
 - HTML
-- CSS
+- CSS, SASS
 - JavaScript
 - React
 - Redux
