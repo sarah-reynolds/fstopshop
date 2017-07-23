@@ -17,6 +17,10 @@ class Login extends Component {
 
 	loginSubmit(event){
 		event.preventDefault();
+		console.log("username: event.target[0]", event.target[0])
+		console.log("username value", event.target[0].value)
+		console.log("password: event.target[1]", event.target[1])
+		console.log("password value", event.target[1].value)
 		this.props.loginAction({
 			username: event.target[0].value,
 			password: event.target[1].value
