@@ -18,11 +18,11 @@ class NavBar extends Component {
 
 	render() {
 		console.log("loginData", this.props.loginData.msg)
-		if(this.props.loginData.msg === 'foundUser'){
+		if(this.props.loginData.token !== undefined){
 			return (
 				<div className="nav-wrapper text-right">
 					<div className="col-xs-12 text-right">
-						Welcome back! <Link to='/account'>View account</Link> or <Link to='/' onClick={this.handleLogout}>Log out</Link>
+						Welcome back! <Link className="account-links" to='/account'>View account</Link> or <Link className="account-links" to='/' onClick={this.handleLogout}>Log out</Link>
 					</div>
 				</div>
 			)
@@ -30,7 +30,7 @@ class NavBar extends Component {
 			return (
 				<div className="nav-wrapper text-right">
 					<div className="col-xs-12 text-right">
-						<Link to='/login'>Login</Link> or <Link to='/register'>Register</Link>
+						<Link to='/login' className="account-links">Login</Link> or <Link className="account-links" to='/register'>Register</Link>
 					</div>
 				</div>
 			)
