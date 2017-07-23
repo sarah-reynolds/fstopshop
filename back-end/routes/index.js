@@ -41,9 +41,9 @@ for(let x = 1;x<6;x++){
 // })
 
 auctionsArray[0].then((theResults)=>{
-	console.log(theResults)
+	// console.log(theResults)
 	auctionsArray[1].then((theResults2)=>{
-		console.log(theResults2)
+		// console.log(theResults2)
 	})
 })
 
@@ -121,9 +121,12 @@ router.post('/login', (req, res, next)=>{
 				msg: "badUsername"
 			})
 		}else{
-			// this is a valie username 
+			// this is a valid username 
+			console.log("password", password)
+			console.log("results", results)
+			console.log("results[0].password", results[0].password)
 			checkHash = bcrypt.compareSync(password, results[0].password);
-			// console.log("checkHash ",checkHash)
+			console.log("checkHash ",checkHash)
 			if(checkHash === false){
 				res.json({
 					msg: "badPassword"

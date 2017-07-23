@@ -65,16 +65,15 @@ body {
 /* line 67, ../compass/sass/styles.scss */
 .product-wrapper {
   background-color: white;
-  min-height: 230px;
   border: solid 3px #ECECED;
 }
-/* line 71, ../compass/sass/styles.scss */
+/* line 70, ../compass/sass/styles.scss */
 .product-wrapper img {
   width: 100%;
   margin-top: 5px;
 }
 
-/* line 79, ../compass/sass/styles.scss */
+/* line 78, ../compass/sass/styles.scss */
 #register-form .form-group input {
   background-color: white;
   border: none;
@@ -82,7 +81,7 @@ body {
   border-radius: 0px;
   margin-bottom: 25px;
 }
-/* line 86, ../compass/sass/styles.scss */
+/* line 85, ../compass/sass/styles.scss */
 #register-form .form-group input:focus {
   outline: #1B998B;
   border: 1px solid #1B998B;
