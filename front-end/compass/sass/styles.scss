@@ -35,8 +35,11 @@ body {
 	line-height: 30px;
 		div{
 			background-color: $darkblue;
-				a, a:active, a:hover, a:visited{
+				a, a:active, a:visited{
 					color: $lightblue;
+				}
+				a:hover{
+					color: $green;
 				}
 		}
 		.account-links{
@@ -69,10 +72,29 @@ body {
 
 .product-wrapper{
 	background-color: white;
-	border: solid 3px $lightblue;
-		img{
+	border: solid 5px $lightblue;
+	padding: 10px;
+	&:hover{
+		border: solid 5px $orange;
+		}
+		.auction-item{
+			width: 200px;
+			height: 200px;
+			margin: auto;
+				img{
+					width: 100%;
+					margin-top: 5px;
+					vertical-align: bottom;
+				}
+		}
+		h4{
+			line-height: 30px;
 			width: 100%;
-			margin-top: 5px;
+			white-space: nowrap;
+  			overflow: hidden;
+  			text-overflow: ellipsis;
+  			color: $brightblue;
+  			margin: 0px;
 		}
 }
 
